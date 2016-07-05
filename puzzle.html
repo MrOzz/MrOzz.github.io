@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css">
+ 	<script>
+	function checkAnswer(id, trueAnswer)
+	{
+		var userAnswer = document . getElementById ( id ). value;
+		if ( userAnswer == trueAnswer)
+		return true;
+		else
+		return false;
+	}
+
+	function checkAnswers()
+	{
+		var goodAnswers = 0;
+
+		if (checkAnswer('answer_1', 'эхо'))
+		goodAnswers ++;
+
+		if (checkAnswer('answer_2', 'туча'))
+		goodAnswers ++;
+
+		if (checkAnswer('answer_3', 'молния'))
+		goodAnswers ++;
+
+		if (checkAnswer('answer_4', 'прорубь'))
+		goodAnswers ++;
+
+
+		if ( goodAnswers == 0 )
+		alert ( 'Вы ничего не угадали' );
+		else
+		alert ( 'Количество правильных ответов: ' + goodAnswers );
+
+	}
+	</script>
+</head>
+<body>
+	<div id="header">
+		<a href="index.html">Главная</a><span>/</span>
+		<a href="#">Загадки</a><span>/</span>
+		<a href="guess.html">Угадайка</a><span>/</span>
+		<a href="guess_2.html">Угадайка мультиплеер</a><span>/</span>
+	</div>
+<div id="content">
+	<h1>Игра в загадки</h1>
+	<img src="img/puzzle.png" width="400" height="400"></img>
+		<div id="box_text">
+
+			<h2>Я загадаю тебе несколько загадок, а ты попробуй их отгадать!</h2></br>
+
+			<p>Загадка №1</br>Живёт без тела, говорит без языка. Никто его не видит, зато все его слышат.</br>
+			<input type="text" id="answer_1"></input>
+			<hr>
+			</p>
+
+			<p>Загадка №2</br>Сильнее солнца, слабее ветра. Ног нет, а идет, глаз нет, а плачет.</br>
+			<input type="text" id="answer_2"></input>
+			<hr>
+			</p>
+
+			<p>Загадка №3</br>Летит огневая стрела, никто её не поймает: ни царь, ни царица, ни красна девица.</br>
+			<input type="text" id="answer_3"></input>
+			<hr>
+			</p>
+
+			<p>Загадка №4</br>В новой стене, в круглом окне. Днем стекло разбито, а за ночь вставлено.</br>
+			<input type="text" id="answer_4"></input>
+			<hr>
+			</p>
+
+			<a href="#" onClick="checkAnswers()">Проверить</a>
+
+        </div>
+</div>
+
+<div id="footer">
+	Copyright © 2016 <a href="https://geekbrains.ru/" target="_blank"> GeekBrains </a>
+</div>
+
+</body>
+</html>
